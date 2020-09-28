@@ -12,8 +12,8 @@ public class DailyOperation implements ServiceOperation {
 
     @Override
     public void create() {
-        CsvParsable dailyPareser = new DailyCsvParser();
-        dailyPareser.parse(Constants.RequestUrl.COVID_DAILY);
+        CsvParsable dailyParser = new DailyCsvParser();
+        dailyParser.parse(Constants.RequestUrl.COVID_DAILY);
     }
 
     @Override
