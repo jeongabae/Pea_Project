@@ -3,13 +3,30 @@ package com.pea.api.practice;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * GameBoard
+ *
+ * Note : 2020253059 JeonGaBae
+ */
 public class GameBoard {
     private List<List<GameItem>> items;
 
+    /**
+     * game board constructor call createBoard method
+     *
+     * @param x row
+     * @param y column
+     * @param answers answer matrix
+     */
     public GameBoard(int x, int y, String[][] answers) {
         createBoard(x,y,answers);
     }
 
+    /**
+     * createBoard method
+     *
+     * NOTE: create game board
+     */
     private void createBoard(int x, int y,  String[][] answers) {
         List<List<GameItem>> board = new ArrayList<>();
 
@@ -26,10 +43,18 @@ public class GameBoard {
         this.items = board;
     }
 
+    /**
+     * NOTE: GameBoard Item getter
+     */
     public List<List<GameItem>> getItems() {
         return items;
     }
 
+    /**
+     *
+     * NOTE: check answer by two input number
+     *
+     */
     public boolean isAnswer(int x, int y) {
         String check1="",check2="";
 
@@ -52,6 +77,10 @@ public class GameBoard {
         return check1.equals(check2);
     }
 
+    /**
+     *
+     * NOTE: change game item value -> answer
+     */
     public void changeGameAnswer(int x, int y) {
         int checkCount=0;
 

@@ -5,10 +5,20 @@ import java.util.Scanner;
 
 public class Runner {
 
+    /**
+     * Constructor
+     *
+     * @param board GameBoard created by init {@link GameBoard}
+     */
     public Runner(GameBoard board) {
         playGame(board);
     }
 
+    /**
+     * play game Method
+     *
+     * NOTE: play Game with GameBoard check number and change answer
+     */
     public void playGame(GameBoard board) {
         long startTime = System.currentTimeMillis();
 
