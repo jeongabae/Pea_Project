@@ -1,8 +1,10 @@
 package com.pea.api.daily;
 
 import com.pea.api.common.Constants;
-import com.pea.api.common.CsvParsable;
 import com.pea.api.common.ServiceOperation;
+import com.pea.api.util.CsvParserUtils;
+
+import java.io.IOException;
 
 public class DailyOperation implements ServiceOperation {
 
@@ -12,8 +14,11 @@ public class DailyOperation implements ServiceOperation {
 
     @Override
     public void create() {
-        CsvParsable dailyParser = new DailyCsvParser();
-        dailyParser.parse(Constants.RequestUrl.COVID_DAILY);
+        try {
+            CsvParserUtils.parser(Constants.RequestUrl.COVID_DAILY);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
