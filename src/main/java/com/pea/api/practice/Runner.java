@@ -3,6 +3,11 @@ package com.pea.api.practice;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Runner
+ *
+ * Note : 2020253059 JeonGaBae
+ */
 public class Runner {
 
     /**
@@ -38,12 +43,19 @@ public class Runner {
         outputPlayTime(startTime);
     }
 
+    /**
+     * NOTE: final game play time output
+     */
     private void outputPlayTime(long startTime) {
         long endTime = System.currentTimeMillis();
 
         System.out.println("Game Completed ==> Play Time is : " + (endTime - startTime) + " ms");
     }
 
+    /**
+     *
+     * NOTE: Game Completed check method
+     */
     private boolean validateCompleted(List<List<GameItem>> gameItemList) {
         boolean validated = true;
 
