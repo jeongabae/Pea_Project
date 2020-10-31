@@ -1,21 +1,13 @@
 package com.pea.api.daily.aggregate;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString
+@Builder
 public class RegionCount {
-    private PatientCount patientCount;
-    private int releasedCount;
-
-    public RegionCount(PatientCount patientCount, int releasedCount) {
-        this.patientCount = patientCount;
-        this.releasedCount = releasedCount;
-    }
-
-    public RegionCount() {
-        this.patientCount = new PatientCount();
-        this.releasedCount = 0;
-    }
+    private final PatientCount patientCount;
+    private final int releasedCount;
 }
